@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { H2 } from "../Typography/Typography.styles";
+import styled from 'styled-components';
+import { H2 } from '../Typography/Typography.styles';
 
 export const StyledTable = styled.table`
   border-collapse: collapse;
