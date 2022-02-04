@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Grid = styled.main`
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `;

@@ -1,12 +1,15 @@
 import React from 'react';
-import { Layout, GlobalStyles, Typography } from './ui-kit';
+import {
+  Layout, GlobalStyles, Typography, Table,
+} from './ui-kit';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <Layout>
-        <Typography.H1>hello</Typography.H1>
+        <Typography.H1>Users and comments</Typography.H1>
+        <Table />
       </Layout>
     </>
   );
