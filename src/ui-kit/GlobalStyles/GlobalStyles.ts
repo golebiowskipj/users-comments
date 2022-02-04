@@ -34,6 +34,9 @@ display: block;
 body {
 line-height: 1;
 }
+html{
+font-size: 16px;
+}
 ol, ul {
 list-style: none;
 }
