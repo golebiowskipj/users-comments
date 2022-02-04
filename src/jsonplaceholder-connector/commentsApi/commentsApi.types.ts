@@ -1,4 +1,4 @@
-export interface CommentsResponse {
+export interface CommentResponse {
   id: number;
   postId: number;
   name: string;
@@ -6,4 +6,4 @@ export interface CommentsResponse {
   body: string;
 }
 
-export type GetCommentsResponse = CommentsResponse[];
+export type GetCommentsResponse = CommentResponse[];
