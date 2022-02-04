@@ -1,10 +1,13 @@
-export interface Theme {
-  colors: {
-    primary: string;
-    secondary: string;
-  };
-}
+import 'styled-components';
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
+  export interface DefaultTheme {
+    colors: {
+      primary: string;
+      secondary: string;
+      cta: string;
+      accent: string;
+    };
+    border: string;
+  }
 }
