@@ -1,8 +1,9 @@
 import React from 'react';
+import { Grid } from './Layout.styles';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
-export const Layout = ({ children }: LayoutProps) => {
-  <div>{children}</div>;
-};
+export function Layout({ children }: LayoutProps) {
+  return <Grid>{children}</Grid>;
+}

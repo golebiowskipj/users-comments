@@ -1,7 +1,15 @@
 import React from 'react';
+import { Layout, GlobalStyles, Typography } from './ui-kit';
 
 function App() {
-  return <h1>hello</h1>;
+  return (
+    <>
+      <GlobalStyles />
+      <Layout>
+        <Typography.H1>hello</Typography.H1>
+      </Layout>
+    </>
+  );
 }
 
 export default App;
