@@ -1,16 +1,15 @@
 import { sendRequest, ResponseType } from './axiosWrapper';
-
-const createUrl = (...urls: string[]) => urls.join('/');
+import { createUrl } from './utils/createUrl.util';
 
 export const httpService = (baseUrl: string) => {
-  const get = async <TResponse>(
+  const get = async <Response>(
     endpoint: string,
     params?: unknown,
     responseType?: ResponseType,
-  ): Promise<TResponse> => {
+  ): Promise<Response> => {
     const url = createUrl(baseUrl, endpoint);
 
-    const response = await sendRequest<TResponse>(
+    const response = await sendRequest<Response>(
       'GET',
       url,
       {},

@@ -3,14 +3,14 @@ import axios, {
   ResponseType as AxiosResponseType,
 } from 'axios';
 
-export const sendRequest = async <TResponse>(
+export const sendRequest = async <Response>(
   method: 'GET',
   url: string,
   headers?: Record<string, string>,
   body?: unknown,
   params?: Record<string, string | number>,
   responseType?: ResponseType,
-): Promise<TResponse> => {
+): Promise<Response> => {
   const request: AxiosRequestConfig = {
     method,
     url,
@@ -23,6 +23,13 @@ export const sendRequest = async <TResponse>(
   const response = await axios.request(request);
 
   if (response.status.toString().startsWith('2')) {
+    if (response.headers['x-total-count']) {
+      return {
+        data: response.data,
+        totalCount: response.headers['x-total-count'],
+      } as any;
+    }
+
     return response.data;
   }
 

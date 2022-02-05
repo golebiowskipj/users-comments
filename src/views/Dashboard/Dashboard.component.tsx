@@ -7,8 +7,8 @@ export function Dashboard() {
   return (
     <>
       <Typography.H1>Users and comments</Typography.H1>
-      <CommentsTable />
       <UsersTable />
+      <CommentsTable />
     </>
   );
 }
