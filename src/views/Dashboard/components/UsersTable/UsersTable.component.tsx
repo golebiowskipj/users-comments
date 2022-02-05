@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useUsers, User } from '../../../../models';
 import { Table } from '../../../../ui-kit';
 
@@ -7,16 +7,22 @@ export function UsersTable() {
 
   if (isLoading) return <div>skeleton</div>;
 
+  if (!users) return <div>Sorry, there are no userss available</div>;
+
+  const tableUsers = useMemo(
+    () => users.map(({ id, ...restUser }) => restUser),
+    [users],
+  );
+
   return (
-    <Table<User>
+    <Table<Omit<User, 'id'>>
       columns={[
-        { id: 'id', name: 'ID' },
         { id: 'name', name: 'NAME' },
         { id: 'userName', name: 'USERNAME' },
         { id: 'email', name: 'EMAIL' },
         { id: 'website', name: 'WEBSITE' },
       ]}
-      data={users || []}
+      data={tableUsers || []}
       title="Users"
     />
   );
