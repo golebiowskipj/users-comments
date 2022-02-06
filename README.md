@@ -63,3 +63,4 @@ Test script  `yarn test`
 - increase test coverage 
 - add CI/CD tooling (eg. circleCI)
 - work on branches instead of pushing to main, create PRs with description
+- properly fix linting errors
