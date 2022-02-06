@@ -11,10 +11,11 @@
 ---
 
 ## Stack 
-- React + Typescript 
+- React(CRA) + Typescript 
 - styled-components 
 - react-query
 - axios
+- jest, react-testing-library 
 
 ---
 
