@@ -5,14 +5,16 @@ import { Pagination, Table } from '../../../../ui-kit';
 export function CommentsTable() {
   const { comments, isLoading, pagination } = useComments();
 
-  if (isLoading) return <div>skeleton</div>;
-
-  if (!comments) return <div>Sorry, there are no comments available</div>;
-
   const tableComments = useMemo(
-    () => comments.map(({ id, ...restComment }) => restComment),
+    () => (comments ? comments.map(({ id, ...restComment }) => restComment) : []),
     [comments],
   );
+
+  if (isLoading) return <div>skeleton</div>;
+
+  if (tableComments.length === 0) {
+    return <div>Sorry, there are no comments available</div>;
+  }
 
   return (
     <>

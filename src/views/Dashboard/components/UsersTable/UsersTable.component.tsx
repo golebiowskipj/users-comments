@@ -5,14 +5,16 @@ import { Table } from '../../../../ui-kit';
 export function UsersTable() {
   const { users, isLoading } = useUsers();
 
-  if (isLoading) return <div>skeleton</div>;
-
-  if (!users) return <div>Sorry, there are no userss available</div>;
-
   const tableUsers = useMemo(
-    () => users.map(({ id, ...restUser }) => restUser),
+    () => (users ? users.map(({ id, ...restUser }) => restUser) : []),
     [users],
   );
+
+  if (isLoading) return <div>skeleton</div>;
+
+  if (tableUsers.length === 0) {
+    return <div>Sorry, there are no users available</div>;
+  }
 
   return (
     <Table<Omit<User, 'id'>>
