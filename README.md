@@ -44,7 +44,7 @@ In the src directory there are libraries (methods used outside a lib should be e
 - `Name.utils.ts` - contains small, helper functions
 
 ### Convetional commits 
-(DOCS)[https://www.conventionalcommits.org/en/v1.0.0/]
+[DOCS](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ---
 ## Tests 
