@@ -26,7 +26,7 @@
 ---
 ## Conventions
 ### Folder structure
-In the src directory there are libraries (methods used outside a lib should be exportet from index file):
+In the src directory there are libraries (methods used outside a lib should be exported from index file):
 - `http-client` contains axios wrapper and http service with GET method, ready to be extended
 - `jsonplaceholder-connector` contains users and comments APIs, connects the app with jsonplaceholder API
 - `models` contains data services and DTO mappers, react-query takes care of server state and caches data for 1hr
