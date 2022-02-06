@@ -51,3 +51,15 @@ In the src directory there are libraries (methods used outside a lib should be e
 Due to time limitations there are only serveral tests just to show the approach. Simple util functions are unit tested, Pagination component is covered by semi e2e tests with user interaction. 
 
 Test script  `yarn test`
+
+---
+
+## What could be done to polish the app
+
+- design the app, change the font, add spaces between elements, style elements, add skeletons, empty states, error states 
+- add logger service
+- add routing 
+- add i18y, put messages in centralized json file
+- increase test coverage 
+- add CI/CD tooling (eg. circleCI)
+- work on branches instead of pushing to main, create PRs with description
